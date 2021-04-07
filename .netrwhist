@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/home/kippster/code/cpp/test'
+let g:netrw_dirhist_5='/home/kippster/.config/qtile/bin'
+let g:netrw_dirhist_4='/home/kippster/.config/qtile'
+let g:netrw_dirhist_3='/home/kippster/code/IT-2/eksamen_oving/var_20/mysite/fotballcup/static/fotballcup/javascript'
+let g:netrw_dirhist_2='/home/kippster/.config/nvim/vim-plug'
+let g:netrw_dirhist_1='/home/kippster/.config/nvim'

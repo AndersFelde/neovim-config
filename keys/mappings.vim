@@ -1,0 +1,67 @@
+map <silent> <C-n> :CocCommand explorer<CR>
+" Better nav for omnicomplete
+inoremap <expr> <c-j> ("\<C-n>")
+inoremap <expr> <c-k> ("\<C-p>")
+
+" Use alt + hjkl to resize windows
+nnoremap <M-j>    :resize -2<CR>
+nnoremap <M-k>    :resize +2<CR>
+nnoremap <M-h>    :vertical resize -2<CR>
+nnoremap <M-l>    :vertical resize +2<CR>
+
+" Easy CAPS
+inoremap <c-u> <ESC>viwUi
+nnoremap <c-u> viwU<Esc>
+
+" TAB in general mode will move to text buffer
+nnoremap <TAB> :bnext<CR>
+" SHIFT-TAB will go back
+nnoremap <S-TAB> :bprevious<CR>
+
+nnoremap <C-w> :Bclose <CR>
+
+" Alternate way to save
+nnoremap <C-s> :w<CR>
+" Alternate way to quit
+nnoremap <C-Q> :wq!<CR>
+" Use control-c instead of escape
+nnoremap <C-c> <Esc>
+" <TAB>: completion.
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+
+" Better tabbing
+vnoremap < <gv
+vnoremap > >gv
+
+vnoremap <S-h> <gv
+vnoremap <S-l> >gv
+
+" Better window navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+nnoremap <Leader>o o<Esc>^Da
+nnoremap <Leader>O O<Esc>^Da
+
+imap <C-l> <Plug>(coc-snippets-expand)
+
+" NERDCOMMENTER
+nnoremap <silent> <leader>c} V}:call NERDComment('x', 'toggle')<CR>
+nnoremap <silent> <leader>c{ V{:call NERDComment('x', 'toggle')<CR>
+
+"Docstrings
+nnoremap <silent> <leader>d :Docstring <CR>
+nnoremap <silent> <leader>gt :CocCommand git.foldUnchanged <CR>
+
+nnoremap <S-h> b
+nnoremap <S-l> w
+
+" cs'" - endre fra ' til "
+" ds' - slette ' quotes
+" ysiw' - wrappe ord med '
+" yss) - wrappe linje med ()
+
+" WhichKey
+nnoremap <silent> <leader> :WhichKey '<Space>'<CR>

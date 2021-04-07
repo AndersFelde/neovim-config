@@ -1,0 +1,12 @@
+source $HOME/.config/nvim/general/settings.vim
+source $HOME/.config/nvim/keys/mappings.vim
+source $HOME/.config/nvim/vim-plug/pluggins.vim
+source $HOME/.config/nvim/modules/airline.vim
+source $HOME/.config/nvim/modules/coc.vim
+source $HOME/.config/nvim/modules/neoformat.vim
+source $HOME/.config/nvim/modules/nerdcommenter.vim
+source $HOME/.config/nvim/modules/python-syntax.vim
+source $HOME/.config/nvim/modules/rainbow_parentheses.vim
+source $HOME/.config/nvim/modules/vim-jinja.vim
+source $HOME/.config/nvim/modules/cpp-highlight.vim
+source $HOME/.config/nvim/general/theme.vim
