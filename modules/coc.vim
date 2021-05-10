@@ -52,6 +52,7 @@ let g:coc_global_extensions = [
       \'coc-git',
       \'coc-explorer', 
       \'coc-tsserver', 
-      \'coc-pyright'
+      \'coc-pyright',
+      \'coc-eslint'
       \]
 

@@ -58,6 +58,11 @@ nnoremap <silent> <leader>gt :CocCommand git.foldUnchanged <CR>
 nnoremap <S-h> b
 nnoremap <S-l> w
 
+nnoremap <S-j> 5j 
+nnoremap <S-k> 5k 
+vnoremap <S-j> 5j 
+vnoremap <S-k> 5k 
+
 " cs'" - endre fra ' til "
 " ds' - slette ' quotes
 " ysiw' - wrappe ord med '

@@ -19,4 +19,5 @@ Plug 'kien/ctrlp.vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'lilydjwg/colorizer'
 Plug 'liuchengxu/vim-which-key'
+Plug 'yuezk/vim-js'
 call plug#end()
