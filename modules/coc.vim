@@ -53,6 +53,7 @@ let g:coc_global_extensions = [
       \'coc-explorer', 
       \'coc-tsserver', 
       \'coc-pyright',
-      \'coc-eslint'
+      \'coc-eslint',
+      \'coc-markdownlint'
       \]
 
