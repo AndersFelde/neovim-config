@@ -20,4 +20,5 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'lilydjwg/colorizer'
 Plug 'liuchengxu/vim-which-key'
 Plug 'yuezk/vim-js'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 call plug#end()
