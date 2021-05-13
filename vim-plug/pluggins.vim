@@ -21,4 +21,6 @@ Plug 'lilydjwg/colorizer'
 Plug 'liuchengxu/vim-which-key'
 Plug 'yuezk/vim-js'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+Plug 'Yggdroot/indentLine'
+Plug 'lukas-reineke/indent-blankline.nvim'
 call plug#end()

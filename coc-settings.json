@@ -47,5 +47,10 @@
             }
         }
     },
-    "suggest.labelMaxLength": 80
+    "suggest.labelMaxLength": 80,
+    "markdownlint.config": {
+        "default": true,
+        "whitespace": false,
+        "indentation": false
+    }
 }
