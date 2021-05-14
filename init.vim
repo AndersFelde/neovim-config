@@ -11,4 +11,5 @@ source $HOME/.config/nvim/modules/vim-jinja.vim
 source $HOME/.config/nvim/modules/cpp-highlight.vim
 source $HOME/.config/nvim/modules/indent-blankline.vim
 source $HOME/.config/nvim/modules/indentLine.vim
+source $HOME/.config/nvim/modules/dashboard.vim
 source $HOME/.config/nvim/general/theme.vim
