@@ -61,7 +61,6 @@ vim.api.nvim_set_keymap("n", "<leader>xq", "<cmd>Trouble quickfix<cr>", {silent 
 vim.api.nvim_set_keymap("n", "<leader>gR", "<cmd>Trouble lsp_references<cr>", {silent = true, noremap = true})
 
 -- WhichKey
-vim.api.nvim_set_keymap("", "<leader>", ":WhichKey '<Space>'<CR>", {noremap = true, silent = true})
 
 -- Compe
 vim.api.nvim_set_keymap("i", "<C-CR>", "compe#complete()", {noremap = true, expr = true})

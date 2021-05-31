@@ -9,6 +9,7 @@ return require("packer").startup(
 
         --Colorscheme
         use "folke/tokyonight.nvim"
+        use "marko-cerovac/material.nvim"
         use "kyazdani42/nvim-web-devicons" -- for file icons
 
         --Tree
@@ -43,11 +44,17 @@ return require("packer").startup(
 
         --WhichKey
         use {
+            "folke/which-key.nvim",
+            config = function()
+                require("which-key").setup {}
+            end
+        }
+        --[[ use {
             "AckslD/nvim-whichkey-setup.lua",
             requires = {
                 "liuchengxu/vim-which-key"
             }
-        }
+        } ]]
         -- use 'kosayoda/nvim-lightbulb'
         -- use {'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}}
         use "nvim-treesitter/nvim-treesitter"
