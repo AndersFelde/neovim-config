@@ -1,15 +1,11 @@
 -- LspInstall
 local on_attach = function(client, bufnr)
+    -- Mappings.
     local function buf_set_keymap(...)
         vim.api.nvim_buf_set_keymap(bufnr, ...)
     end
-    --[[ local function buf_set_option(...)
-        vim.api.nvim_buf_set_option(bufnr, ...)
-    end ]]
-    -- Mappings.
     local opts = {noremap = true, silent = true}
 
-    -- See `:help vim.lsp.*` for documentation on any of the below functions
     buf_set_keymap("n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
     buf_set_keymap("n", "<leader>wa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>", opts)
     buf_set_keymap("n", "<leader>wr", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>", opts)
@@ -26,6 +22,7 @@ local on_attach = function(client, bufnr)
     buf_set_keymap("n", "<leader>lp", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", opts)
     --[[ buf_set_keymap("n", "<space>q", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>", opts)
     buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts) ]]
+    require "lsp_signature".on_attach()
 end
 
 local function setup_servers()
@@ -55,9 +52,6 @@ capabilities.textDocument.completion.completionItem.resolveSupport = {
     }
 }
 
---Format on save
--- vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
-
 --lsp-utils
 vim.lsp.handlers["textDocument/codeAction"] = require "lsputil.codeAction".code_action_handler
 vim.lsp.handlers["textDocument/references"] = require "lsputil.locations".references_handler
@@ -68,6 +62,7 @@ vim.lsp.handlers["textDocument/implementation"] = require "lsputil.locations".im
 vim.lsp.handlers["textDocument/documentSymbol"] = require "lsputil.symbols".document_handler
 vim.lsp.handlers["workspace/symbol"] = require "lsputil.symbols".workspace_handler
 
+--Diagnostics custom
 vim.lsp.handlers["textDocument/publishDiagnostics"] =
     vim.lsp.with(
     vim.lsp.diagnostic.on_publish_diagnostics,

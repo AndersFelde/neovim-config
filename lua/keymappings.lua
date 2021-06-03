@@ -10,7 +10,6 @@
 --'l'	mapmode-l	Insert, Command-line, Lang-Arg	:lmap
 --'c'	mapmode-c	Command-line	:cmap
 --'t'	mapmode-t	Terminal	:tmap
-
 vim.api.nvim_set_keymap("", "<C-n>", ":NvimTreeToggle<CR>", {noremap = true, silent = true})
 
 -- Resize window
@@ -84,3 +83,10 @@ vim.api.nvim_set_keymap("n", "<leader>fb", "<cmd>Telescope marks<CR>", {noremap 
 -- Session
 vim.api.nvim_set_keymap("n", "<Leader>ss", "<cmd>SessionSave<CR>", {noremap = true})
 vim.api.nvim_set_keymap("n", "<Leader>sl", "<cmd>SessionLoad<CR>", {noremap = true})
+
+-- Symbols-outline
+vim.api.nvim_set_keymap("", "<C-m>", ":SymbolsOutline<CR>", {noremap = true})
+
+--Todo
+vim.api.nvim_set_keymap("", "<leader>ft", "<cmd>TodoTelescope<CR>", {noremap = true})
+vim.api.nvim_set_keymap("", "<leader>xt", "<cmd>TodoTrouble<CR>", {noremap = true})
