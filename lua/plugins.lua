@@ -47,6 +47,9 @@ return require("packer").startup(
         use "simrat39/symbols-outline.nvim"
         use "ray-x/lsp_signature.nvim"
         use "kosayoda/nvim-lightbulb"
+
+        -- TODO: Instalere lspsaga?
+        -- TODO: Instalere navigator?
         -- use "glepnir/lspsaga.nvim"
         -- use 'kosayoda/nvim-lightbulb'
         -- use {'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}}
