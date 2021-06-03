@@ -4,106 +4,110 @@ vim.cmd [[packadd packer.nvim]]
 -- vim._update_package_paths()
 
 return require("packer").startup(
-    function(use)
-        use "wbthomason/packer.nvim"
+  function(use)
+    use "wbthomason/packer.nvim"
 
-        --Colorscheme
-        use "folke/tokyonight.nvim"
-        use "marko-cerovac/material.nvim"
-        use "kyazdani42/nvim-web-devicons" -- for file icons
+    --Colorscheme
+    use "folke/tokyonight.nvim"
+    use "marko-cerovac/material.nvim"
+    use "kyazdani42/nvim-web-devicons" -- for file icons
 
-        --Tree
-        use "kyazdani42/nvim-tree.lua"
-        use {
-            "hoob3rt/lualine.nvim",
-            requires = {
-                "kyazdani42/nvim-web-devicons",
-                opt = true
-            }
-        }
+    --Tree
+    use "kyazdani42/nvim-tree.lua"
+    use {
+      "hoob3rt/lualine.nvim",
+      requires = {
+        "kyazdani42/nvim-web-devicons",
+        opt = true
+      }
+    }
 
-        -- Bar
-        use "romgrk/barbar.nvim"
+    -- Bar
+    use "romgrk/barbar.nvim"
 
-        --LSP
-        use "neovim/nvim-lspconfig"
-        use "kabouzeid/nvim-lspinstall"
-        use {
-            "folke/trouble.nvim",
-            requires = "kyazdani42/nvim-web-devicons",
-            config = function()
-                require("trouble").setup {}
-            end
-        }
-        use "lukas-reineke/format.nvim"
-        use "windwp/nvim-autopairs"
-        use "p00f/nvim-ts-rainbow"
+    --LSP
+    use "neovim/nvim-lspconfig"
+    use "kabouzeid/nvim-lspinstall"
+    use "nvim-treesitter/nvim-treesitter"
+    use {
+      "folke/trouble.nvim",
+      requires = "kyazdani42/nvim-web-devicons",
+      config = function()
+        require("trouble").setup {}
+      end
+    }
+    -- use "lukas-reineke/format.nvim"
+    use "mhartington/formatter.nvim"
+    use "windwp/nvim-autopairs"
+    use "p00f/nvim-ts-rainbow"
+    use {
+      "RishabhRD/nvim-lsputils",
+      requires = "RishabhRD/popfix"
+    }
+    use "onsails/lspkind-nvim"
+    -- use "glepnir/lspsaga.nvim"
+    -- use 'kosayoda/nvim-lightbulb'
+    -- use {'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}}
 
-        --Comments
-        use "b3nj5m1n/kommentary"
+    --Comments
+    use "b3nj5m1n/kommentary"
 
-        --WhichKey
-        use {
-            "folke/which-key.nvim",
-            config = function()
-                require("which-key").setup {}
-            end
-        }
-        --[[ use {
-            "AckslD/nvim-whichkey-setup.lua",
-            requires = {
-                "liuchengxu/vim-which-key"
-            }
-        } ]]
-        -- use 'kosayoda/nvim-lightbulb'
-        -- use {'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}}
-        use "nvim-treesitter/nvim-treesitter"
+    --WhichKey
+    use {
+      "folke/which-key.nvim",
+      config = function()
+        require("which-key").setup {}
+      end
+    }
 
-        -- completion
-        use "hrsh7th/nvim-compe"
+    --Cursor highlight
+    use "yamatsum/nvim-cursorline"
 
-        --colorizer
-        use {
-            "norcalli/nvim-colorizer.lua",
-            config = function()
-                require("colorizer").setup()
-            end
-        }
+    -- completion
+    use "hrsh7th/nvim-compe"
 
-        --Highlight same words and line
-        use "yamatsum/nvim-cursorline"
+    --colorizer
+    use {
+      "norcalli/nvim-colorizer.lua",
+      config = function()
+        require("colorizer").setup()
+      end
+    }
 
-        -- snippets
-        use "hrsh7th/vim-vsnip"
-        use "hrsh7th/vim-vsnip-integ"
-        use "rafamadriz/friendly-snippets"
+    --Highlight same words and line
+    -- use "yamatsum/nvim-cursorline"
 
-        -- git
-        use {
-            "lewis6991/gitsigns.nvim",
-            requires = {
-                "nvim-lua/plenary.nvim"
-            },
-            config = function()
-                require("gitsigns").setup()
-            end
-        }
+    -- snippets
+    use "hrsh7th/vim-vsnip"
+    use "hrsh7th/vim-vsnip-integ"
+    use "rafamadriz/friendly-snippets"
 
-        --Dashboard
-        use {
-            "glepnir/dashboard-nvim",
-            config = function()
-                vim.cmd("let g:dashboard_default_executive ='telescope'")
-            end
-        }
+    -- git
+    use {
+      "lewis6991/gitsigns.nvim",
+      requires = {
+        "nvim-lua/plenary.nvim"
+      },
+      config = function()
+        require("gitsigns").setup()
+      end
+    }
 
-        --Telescope
-        use {
-            "nvim-telescope/telescope.nvim",
-            requires = {
-                "nvim-lua/popup.nvim",
-                "nvim-lua/plenary.nvim"
-            }
-        }
-    end
+    --Dashboard
+    use {
+      "glepnir/dashboard-nvim",
+      config = function()
+        vim.cmd("let g:dashboard_default_executive ='telescope'")
+      end
+    }
+
+    --Telescope
+    use {
+      "nvim-telescope/telescope.nvim",
+      requires = {
+        "nvim-lua/popup.nvim",
+        "nvim-lua/plenary.nvim"
+      }
+    }
+  end
 )

@@ -80,9 +80,9 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/kippster/.local/share/nvim/site/pack/packer/start/dashboard-nvim"
   },
-  ["format.nvim"] = {
+  ["formatter.nvim"] = {
     loaded = true,
-    path = "/home/kippster/.local/share/nvim/site/pack/packer/start/format.nvim"
+    path = "/home/kippster/.local/share/nvim/site/pack/packer/start/formatter.nvim"
   },
   ["friendly-snippets"] = {
     loaded = true,
@@ -96,6 +96,10 @@ _G.packer_plugins = {
   kommentary = {
     loaded = true,
     path = "/home/kippster/.local/share/nvim/site/pack/packer/start/kommentary"
+  },
+  ["lspkind-nvim"] = {
+    loaded = true,
+    path = "/home/kippster/.local/share/nvim/site/pack/packer/start/lspkind-nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -130,6 +134,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/kippster/.local/share/nvim/site/pack/packer/start/nvim-lspinstall"
   },
+  ["nvim-lsputils"] = {
+    loaded = true,
+    path = "/home/kippster/.local/share/nvim/site/pack/packer/start/nvim-lsputils"
+  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/home/kippster/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
@@ -153,6 +161,10 @@ _G.packer_plugins = {
   ["plenary.nvim"] = {
     loaded = true,
     path = "/home/kippster/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+  },
+  popfix = {
+    loaded = true,
+    path = "/home/kippster/.local/share/nvim/site/pack/packer/start/popfix"
   },
   ["popup.nvim"] = {
     loaded = true,
@@ -195,10 +207,6 @@ time("Config for trouble.nvim", false)
 time("Config for gitsigns.nvim", true)
 try_loadstring("\27LJ\1\0026\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
 time("Config for gitsigns.nvim", false)
--- Config for: dashboard-nvim
-time("Config for dashboard-nvim", true)
-try_loadstring("\27LJ\1\2R\0\0\2\0\3\0\0054\0\0\0007\0\1\0%\1\2\0>\0\2\1G\0\1\0003let g:dashboard_default_executive ='telescope'\bcmd\bvim\0", "config", "dashboard-nvim")
-time("Config for dashboard-nvim", false)
 -- Config for: nvim-colorizer.lua
 time("Config for nvim-colorizer.lua", true)
 try_loadstring("\27LJ\1\0027\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\nsetup\14colorizer\frequire\0", "config", "nvim-colorizer.lua")
@@ -207,6 +215,10 @@ time("Config for nvim-colorizer.lua", false)
 time("Config for which-key.nvim", true)
 try_loadstring("\27LJ\1\2;\0\0\2\0\3\0\a4\0\0\0%\1\1\0>\0\2\0027\0\2\0002\1\0\0>\0\2\1G\0\1\0\nsetup\14which-key\frequire\0", "config", "which-key.nvim")
 time("Config for which-key.nvim", false)
+-- Config for: dashboard-nvim
+time("Config for dashboard-nvim", true)
+try_loadstring("\27LJ\1\2R\0\0\2\0\3\0\0054\0\0\0007\0\1\0%\1\2\0>\0\2\1G\0\1\0003let g:dashboard_default_executive ='telescope'\bcmd\bvim\0", "config", "dashboard-nvim")
+time("Config for dashboard-nvim", false)
 if should_profile then save_profiles() end
 
 END

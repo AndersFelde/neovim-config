@@ -12,11 +12,20 @@ wk.register(
         ["<leader>c"] = {
             name = "+comment"
         },
-        ["<leader>f"] = {
-            name = "+file"
+        ["<leader>h"] = {
+            name = "+GitSigns"
         },
-        ["<leader>f"] = {
-            name = "+file"
+        ["<leader>s"] = {
+            name = "+session"
+        },
+        ["<leader>w"] = {
+            name = "+workspace"
+        },
+        ["<leader>l"] = {
+            name = "+LSP"
+        },
+        ["<leader>x"] = {
+            name = "+trouble"
         }
     }
 )
