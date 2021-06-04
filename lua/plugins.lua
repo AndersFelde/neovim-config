@@ -1,3 +1,7 @@
+-- TODO: Instalere lspsaga?
+-- TODO: Instalere navigator?
+-- TODO: Surround nvim
+
 vim.cmd [[packadd packer.nvim]]
 
 -- Only if your version of Neovim doesn't have https://github.com/neovim/neovim/pull/12632 merged
@@ -9,7 +13,7 @@ return require("packer").startup(
 
         --Colorscheme
         use "folke/tokyonight.nvim"
-        use "marko-cerovac/material.nvim"
+        -- use "marko-cerovac/material.nvim"
         use "kyazdani42/nvim-web-devicons" -- for file icons
 
         --Tree
@@ -48,8 +52,6 @@ return require("packer").startup(
         use "ray-x/lsp_signature.nvim"
         use "kosayoda/nvim-lightbulb"
 
-        -- TODO: Instalere lspsaga?
-        -- TODO: Instalere navigator?
         -- use "glepnir/lspsaga.nvim"
         -- use 'kosayoda/nvim-lightbulb'
         -- use {'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}}
