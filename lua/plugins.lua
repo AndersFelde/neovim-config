@@ -1,6 +1,6 @@
--- TODO: Instalere lspsaga?
--- TODO: Instalere navigator?
--- TODO: Surround nvim
+-- TODO: Instalere lspsaga
+-- TODO: Instalere navigator
+-- TODO: Sette opp surround word
 
 vim.cmd [[packadd packer.nvim]]
 
@@ -124,6 +124,14 @@ return require("packer").startup(
             requires = "nvim-lua/plenary.nvim",
             config = function()
                 require("todo-comments").setup {}
+            end
+        }
+
+        --Surround
+        use {
+            "blackCauldron7/surround.nvim",
+            config = function()
+                require "surround".setup {}
             end
         }
     end

@@ -90,3 +90,6 @@ vim.api.nvim_set_keymap("", "<C-m>", ":SymbolsOutline<CR>", {noremap = true})
 --Todo
 vim.api.nvim_set_keymap("", "<leader>ft", "<cmd>TodoTelescope<CR>", {noremap = true})
 vim.api.nvim_set_keymap("", "<leader>xt", "<cmd>TodoTrouble<CR>", {noremap = true})
+
+--Surround
+vim.api.nvim_set_keymap("n", "sw", 'bysw"', {noremap = true})
