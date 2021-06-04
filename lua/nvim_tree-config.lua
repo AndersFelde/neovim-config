@@ -1,4 +1,5 @@
 -- TODO: Fixe at cursor starter på starten, slik at alt vises
+-- BUG: Cursor er for langt bort, icons blir borte
 local tree_cb = require "nvim-tree.config".nvim_tree_callback
 vim.g.nvim_tree_bindings = {
     ["<CR>"] = tree_cb("edit"),
@@ -34,10 +35,10 @@ vim.g.nvim_tree_bindings = {
 }
 
 vim.cmd("let g:nvim_tree_ignore = ['.git']")
--- vim.g.nvim_tree_follow = 1
+vim.g.nvim_tree_follow = 1
 vim.g.nvim_tree_indent_markers = 1
 vim.g.nvim_tree_git_hl = 1
 vim.g.nvim_tree_highlight_opened_files = 1
 vim.g.nvim_tree_group_empty = 1
 vim.g.nvim_tree_lsp_diagnostics = 1
-vim.g.nvim_tree_show_icons = {folder_arrow = 0, git = 1, folders = 1, files = 1}
+-- vim.g.nvim_tree_show_icons = {folder_arrow = 0, git = 1, folders = 1, files = 1}
