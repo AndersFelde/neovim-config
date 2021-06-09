@@ -92,4 +92,20 @@ vim.api.nvim_set_keymap("", "<leader>ft", "<cmd>TodoTelescope<CR>", {noremap = t
 vim.api.nvim_set_keymap("", "<leader>xt", "<cmd>TodoTrouble<CR>", {noremap = true})
 
 --Surround
+-- BUG: Fixe surround ord
 vim.api.nvim_set_keymap("n", "sw", 'bysw"', {noremap = true})
+
+--Goto-preview-definition
+vim.api.nvim_set_keymap(
+    "",
+    "<leader>lPd",
+    "<cmd>lua require('goto-preview').goto_preview_definition()<CR>",
+    {noremap = true}
+)
+vim.api.nvim_set_keymap(
+    "",
+    "<leader>lPi",
+    "<cmd>lua require('goto-preview').goto_preview_implementation()<CR>",
+    {noremap = true}
+)
+vim.api.nvim_set_keymap("", "<leader>lPp", "<cmd>lua require('goto-preview').close_all_win()<CR>", {noremap = true})

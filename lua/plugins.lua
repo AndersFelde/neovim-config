@@ -1,7 +1,3 @@
--- TODO: Instalere lspsaga
--- TODO: Instalere navigator
--- TODO: Sette opp surround word
-
 vim.cmd [[packadd packer.nvim]]
 
 -- Only if your version of Neovim doesn't have https://github.com/neovim/neovim/pull/12632 merged
@@ -12,6 +8,7 @@ return require("packer").startup(
         use "wbthomason/packer.nvim"
 
         --Colorscheme
+        use "mhartington/oceanic-next"
         use "folke/tokyonight.nvim"
         -- use "marko-cerovac/material.nvim"
         use "kyazdani42/nvim-web-devicons" -- for file icons
@@ -35,10 +32,7 @@ return require("packer").startup(
         use "nvim-treesitter/nvim-treesitter"
         use {
             "folke/trouble.nvim",
-            requires = "kyazdani42/nvim-web-devicons",
-            config = function()
-                require("trouble").setup {}
-            end
+            requires = "kyazdani42/nvim-web-devicons"
         }
         use "mhartington/formatter.nvim"
         use "windwp/nvim-autopairs"
@@ -51,6 +45,12 @@ return require("packer").startup(
         use "simrat39/symbols-outline.nvim"
         use "ray-x/lsp_signature.nvim"
         use "kosayoda/nvim-lightbulb"
+        use {
+            "rmagatti/goto-preview",
+            config = function()
+                require("goto-preview").setup {}
+            end
+        }
 
         -- use "glepnir/lspsaga.nvim"
         -- use 'kosayoda/nvim-lightbulb'
@@ -128,6 +128,9 @@ return require("packer").startup(
         }
 
         --Surround
+        -- NOTE: visually select s<char> or press ys{motion}{char}
+        -- NOTE: sr<from><to>, sd<char>
+
         use {
             "blackCauldron7/surround.nvim",
             config = function()

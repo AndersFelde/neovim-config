@@ -1,3 +1,4 @@
+-- TODO: Fixe at error er prioritert
 -- LspInstall
 local on_attach = function(client, bufnr)
     -- Mappings.
@@ -17,7 +18,7 @@ local on_attach = function(client, bufnr)
     buf_set_keymap("n", "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
     buf_set_keymap("n", "<leader>lc", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
     buf_set_keymap("n", "<leader>lR", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
-    --buf_set_keymap("n", "<space>le", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>", opts)
+    buf_set_keymap("n", "<space>le", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>", opts)
     buf_set_keymap("n", "<leader>ln", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", opts)
     buf_set_keymap("n", "<leader>lp", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", opts)
     --[[ buf_set_keymap("n", "<space>q", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>", opts)
@@ -89,6 +90,7 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] =
         update_in_insert = false
     }
 )
+-- vim.lsp.diagnostic.set_signs("LspDiagnosticsSignError", {priority = 20})
 vim.fn.sign_define("LspDiagnosticsSignError", {text = " ", texthl = "LspDiagnosticsDefaultError"})
 vim.fn.sign_define("LspDiagnosticsSignWarning", {text = " ", texthl = "LspDiagnosticsDefaultWarning"})
 vim.fn.sign_define("LspDiagnosticsSignInformation", {text = " ", texthl = "LspDiagnosticsDefaultInformation"})

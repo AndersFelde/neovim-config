@@ -29,11 +29,12 @@ vim.cmd("set noshowmode") -- We don't need to see things like -- INSERT -- anymo
 -- vim.cmd('set nowritebackup')                       -- This is recommended by coc
 vim.cmd("set updatetime=300") -- Faster completion
 vim.cmd("set timeoutlen=300") -- By default timeoutlen is 1000 ms
-vim.cmd("set formatoptions-=cro") -- Stop newline continution of comments
+-- vim.cmd("set formatoptions-=cro") -- Stop newline continution of comments
 vim.cmd("set clipboard=unnamedplus") -- Copy paste between vim and everything else
 vim.cmd("set number relativenumber")
 vim.cmd("filetype plugin on")
 
+vim.cmd([[autocmd FileType * set formatoptions-=o]])
 --commentary
 vim.g.kommentary_create_default_mappings = false
 
