@@ -29,7 +29,13 @@ return require("packer").startup(
         --LSP
         use "neovim/nvim-lspconfig"
         use "kabouzeid/nvim-lspinstall"
-        use "nvim-treesitter/nvim-treesitter"
+        use {
+            "nvim-treesitter/nvim-treesitter",
+            config = function()
+                vim.cmd(":TSUpdate")
+            end
+        }
+
         use {
             "folke/trouble.nvim",
             requires = "kyazdani42/nvim-web-devicons"
@@ -137,5 +143,9 @@ return require("packer").startup(
                 require "surround".setup {}
             end
         }
+
+        --Reload
+        -- NOTE: :Reload
+        use "famiu/nvim-reload"
     end
 )
