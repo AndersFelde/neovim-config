@@ -80,6 +80,14 @@ vim.api.nvim_set_keymap("n", "<leader>fc", "<cmd>Telescope command_history<CR>",
 vim.api.nvim_set_keymap("n", "<leader>fh", "<cmd>Telescope oldfiles<CR>", {noremap = true})
 vim.api.nvim_set_keymap("n", "<leader>fb", "<cmd>Telescope marks<CR>", {noremap = true})
 
+--Telescope-project
+vim.api.nvim_set_keymap(
+    "n",
+    "<leader>fp",
+    "<cmd>lua require'telescope'.extensions.project.project{display_type = 'full'}<CR>",
+    {noremap = true}
+)
+
 -- Session
 vim.api.nvim_set_keymap("n", "<Leader>ss", "<cmd>SessionSave<CR>", {noremap = true})
 vim.api.nvim_set_keymap("n", "<Leader>sl", "<cmd>SessionLoad<CR>", {noremap = true})

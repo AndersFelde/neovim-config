@@ -31,9 +31,7 @@ return require("packer").startup(
         use "kabouzeid/nvim-lspinstall"
         use {
             "nvim-treesitter/nvim-treesitter",
-            config = function()
-                vim.cmd(":TSUpdate")
-            end
+            run = ":TSUpdate"
         }
 
         use {
@@ -122,6 +120,13 @@ return require("packer").startup(
                 "nvim-lua/popup.nvim",
                 "nvim-lua/plenary.nvim"
             }
+        }
+        -- NOTE: w for å velge directory
+        use {
+            "nvim-telescope/telescope-project.nvim",
+            config = function()
+                require "telescope".load_extension("project")
+            end
         }
 
         --Todo
