@@ -81,13 +81,33 @@ require("formatter").setup(
                 end
             },
             python = {
-                -- luafmt
+                -- python
                 function()
                     return {
                         exe = "black",
                         args = {},
                         stdin = false,
                         tempfile_dir = "/tmp"
+                    }
+                end
+            },
+            c = {
+                -- clang
+                function()
+                    return {
+                        exe = "clang-format",
+                        args = {'-style="{BasedOnStyle: Google, UseTab: Never, IndentWidth: 4}"'},
+                        stdin = true
+                    }
+                end
+            },
+            cpp = {
+                -- clang
+                function()
+                    return {
+                        exe = "clang-format",
+                        args = {'-style="{BasedOnStyle: Google, UseTab: Never, IndentWidth: 4}"'},
+                        stdin = true
                     }
                 end
             }
