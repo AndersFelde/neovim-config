@@ -12,8 +12,11 @@ wk.register(
         ["<leader>h"] = {
             name = "+GitSigns"
         },
-        ["<leader>d"] = {
+        ["<leader>D"] = {
             name = "+DiffView"
+        },
+        ["<leader>d"] = {
+            name = "+Debug(DAP)"
         },
         ["<leader>s"] = {
             name = "+session"
