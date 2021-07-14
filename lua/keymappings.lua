@@ -35,6 +35,7 @@ vim.api.nvim_set_keymap("n", "<C-h>", "<C-w>h", {noremap = true})
 vim.api.nvim_set_keymap("n", "<C-j>", "<C-w>j", {noremap = true})
 vim.api.nvim_set_keymap("n", "<C-k>", "<C-w>k", {noremap = true})
 vim.api.nvim_set_keymap("n", "<C-l>", "<C-w>l", {noremap = true})
+local a = vim.api
 
 -- Text navigation
 vim.api.nvim_set_keymap("", "<S-h>", "b", {noremap = true})
@@ -58,6 +59,8 @@ vim.api.nvim_set_keymap("n", "<leader>xd", "<cmd>Trouble lsp_document_diagnostic
 vim.api.nvim_set_keymap("n", "<leader>xl", "<cmd>Trouble loclist<cr>", {silent = true, noremap = true})
 vim.api.nvim_set_keymap("n", "<leader>xq", "<cmd>Trouble quickfix<cr>", {silent = true, noremap = true})
 vim.api.nvim_set_keymap("n", "<leader>xr", "<cmd>Trouble lsp_references<cr>", {silent = true, noremap = true})
+local t = "joe"
+print(t)
 
 -- WhichKey
 
@@ -117,3 +120,8 @@ vim.api.nvim_set_keymap(
     {noremap = true}
 )
 vim.api.nvim_set_keymap("", "<leader>lPp", "<cmd>lua require('goto-preview').close_all_win()<CR>", {noremap = true})
+
+--Diffview
+vim.api.nvim_set_keymap("", "<leader>do", "<cmd>:DiffviewOpen<CR>", {noremap = true})
+vim.api.nvim_set_keymap("", "<leader>dc", "<cmd>:DiffviewClose<CR>", {noremap = true})
+vim.api.nvim_set_keymap("", "<leader>dr", "<cmd>:DiffviewRefresh<CR>", {noremap = true})

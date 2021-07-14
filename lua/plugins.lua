@@ -108,9 +108,14 @@ return require("packer").startup(
             "TimUntersberger/neogit",
             requires = "nvim-lua/plenary.nvim",
             config = function()
-                require("neogit").setup {}
+                require("neogit").setup {
+                    integrations = {
+                        diffview = true
+                    }
+                }
             end
         }
+        use "sindrets/diffview.nvim"
 
         --Dashboard
         use {
