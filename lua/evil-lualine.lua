@@ -45,7 +45,7 @@ local config = {
             normal = {c = {fg = colors.fg, bg = colors.bg}},
             inactive = {c = {fg = colors.fg, bg = colors.bg}}
         },
-        disabled_filetypes = {"NvimTree", "dashboard", "Trouble", "lsputil*"}
+        disabled_filetypes = {"NvimTree", "dashboard", "Trouble", "packer", "lsputil*"}
     },
     sections = {
         -- these are to remove the defaults

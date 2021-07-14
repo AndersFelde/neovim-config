@@ -14,7 +14,10 @@ return require("packer").startup(
         use "kyazdani42/nvim-web-devicons" -- for file icons
 
         --Tree
-        use "kyazdani42/nvim-tree.lua"
+        use {
+            "kyazdani42/nvim-tree.lua"
+            -- commit = "fd7f60e242205ea9efc9649101c81a07d5f458bb"
+        }
         use {
             "hoob3rt/lualine.nvim",
             requires = {
@@ -99,9 +102,13 @@ return require("packer").startup(
             "lewis6991/gitsigns.nvim",
             requires = {
                 "nvim-lua/plenary.nvim"
-            },
+            }
+        }
+        use {
+            "TimUntersberger/neogit",
+            requires = "nvim-lua/plenary.nvim",
             config = function()
-                require("gitsigns").setup()
+                require("neogit").setup {}
             end
         }
 
