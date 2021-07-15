@@ -124,9 +124,12 @@ vim.api.nvim_set_keymap("", "<leader>Dc", "<cmd>:DiffviewClose<CR>", {noremap = 
 vim.api.nvim_set_keymap("", "<leader>Dr", "<cmd>:DiffviewRefresh<CR>", {noremap = true})
 
 --DAP
-vim.api.nvim_set_keymap("", "<leader>db", "<cmd>:lua require'dap'.toggle_breakpoint()<CR>", {noremap = true})
-vim.api.nvim_set_keymap("", "<leader>dl", "<cmd>:lua require'dap'.list_breakpoints()<CR>", {noremap = true})
-vim.api.nvim_set_keymap("", "<leader>dc", "<cmd>:lua require'dap'.continue()<CR>", {noremap = true})
-vim.api.nvim_set_keymap("", "<leader>do", "<cmd>:lua require'dap'.step_over()<CR>", {noremap = true})
-vim.api.nvim_set_keymap("", "<leader>di", "<cmd>:lua require'dap'.step_into()<CR>", {noremap = true})
-vim.api.nvim_set_keymap("", "<leader>ds", "<cmd>:lua require'dap'.stop()<CR>", {noremap = true})
+vim.api.nvim_set_keymap("", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<CR>", {noremap = true})
+vim.api.nvim_set_keymap("", "<leader>dl", "<cmd>lua require'dap'.list_breakpoints()<CR>", {noremap = true})
+vim.api.nvim_set_keymap("", "<leader>dc", "<cmd>lua require'dap'.continue()<CR>", {noremap = true})
+vim.api.nvim_set_keymap("", "<leader>do", "<cmd>lua require'dap'.step_over()<CR>", {noremap = true})
+vim.api.nvim_set_keymap("", "<leader>di", "<cmd>lua require'dap'.step_into()<CR>", {noremap = true})
+vim.api.nvim_set_keymap("", "<leader>ds", "<cmd>lua require'dap'.stop()<CR>", {noremap = true})
+vim.api.nvim_set_keymap("", "<leader>dd", "<cmd>lua require'dap'.disconnect()<CR>", {noremap = true})
+vim.api.nvim_set_keymap("", "<leader>du", "<cmd>lua require'dapui'.toggle()<CR>", {noremap = true})
+vim.api.nvim_set_keymap("", "<leader>dr", "<cmd>lua require'dap'.repl.toggle()<CR>", {noremap = true})

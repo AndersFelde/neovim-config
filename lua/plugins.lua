@@ -169,6 +169,6 @@ return require("packer").startup(
         -- BUG: Fungerer ikke atm
         use "mfussenegger/nvim-dap"
         use {"rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"}}
-        use {"Pocco81/DAPInstall.nvim", requires = {"mfussenegger/nvim-dap"}}
+        -- use {"Pocco81/DAPInstall.nvim", requires = {"mfussenegger/nvim-dap"}}
     end
 )

@@ -6,7 +6,7 @@ local dap = require "dap"
 -- NOTE: Spesielt install dir for vscode-cpptools
 dap.adapters.cpptools = {
     type = "executable",
-    command = "/home/kippster/.local/share/nvim/dapinstall/ccppr_vsc_dbg/extension/debugAdapters/OpenDebugAD7"
+    command = "/home/kippster/.local/share/nvim/vscode-cpptools/extension/debugAdapters/OpenDebugAD7"
 }
 
 dap.configurations.cpp = {
@@ -14,11 +14,14 @@ dap.configurations.cpp = {
         name = "Launch",
         type = "cpptools",
         request = "launch",
-        program = function()
+        --[[ program = function()
             return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
-        end,
+        end, ]]
+        program = "${fileDirname}/${fileBasenameNoExtension}.c",
         cwd = "${workspaceFolder}",
-        stopOnEntry = true
+        stopOnEntry = true,
+        MIMode = "gdb",
+        miDebuggerPath = "/usr/bin/gdb"
     }
 }
 
