@@ -170,5 +170,8 @@ return require("packer").startup(
         use "mfussenegger/nvim-dap"
         use {"rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"}}
         -- use {"Pocco81/DAPInstall.nvim", requires = {"mfussenegger/nvim-dap"}}
+
+        --Terminal
+        use "oberblastmeister/termwrapper.nvim"
     end
 )
