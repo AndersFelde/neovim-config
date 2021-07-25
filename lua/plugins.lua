@@ -116,6 +116,7 @@ return require("packer").startup(
             end
         }
         use "sindrets/diffview.nvim"
+        use "kdheepak/lazygit.nvim"
 
         --Dashboard
         use {

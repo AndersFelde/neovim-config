@@ -124,3 +124,7 @@ keymap("", "<leader>dr", "<cmd>lua require'dap'.repl.toggle()<CR>", {noremap = t
 --Terminal
 keymap("", "<leader>t", "<cmd>Ttoggle<CR>", {noremap = true})
 keymap("t", "<Esc>", "<C-\\><C-n>", {noremap = true})
+
+--Git
+keymap("", "<leader>gn", "<cmd>Neogit<CR>", {noremap = true})
+keymap("", "<leader>gl", "<cmd>LazyGit<CR>", {noremap = true})
