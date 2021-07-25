@@ -15,9 +15,9 @@ git clone https://github.com/wbthomason/packer.nvim\
 
 ### Install external formatters (optional)
 
--   [Black](https://github.com/psf/black) _Python_
--   [Luafmt](https://github.com/CurtisFenner/luafmt) _Lua_
--   [html-beautify](https://www.html-tidy.org/) _HTML_
--   [Prettier](https://prettier.io/) _javascript, markdown, json_
--   [clang-format](https://clang.llvm.org/docs/ClangFormat.html) _c, cpp_
--   [sed](https://archlinux.org/packages/core/x86_64/sed/) _Remove trailing spaces_
+- [Black](https://github.com/psf/black) _Python_
+- [Luafmt](https://github.com/CurtisFenner/luafmt) _Lua_
+- [html-beautify](https://aur.archlinux.org/packages/js-beautify/) _HTML_
+- [Prettier](https://prettier.io/) _javascript, markdown, json_
+- [clang-format](https://clang.llvm.org/docs/ClangFormat.html) _c, cpp_
+- [sed](https://archlinux.org/packages/core/x86_64/sed/) _Remove trailing spaces_
