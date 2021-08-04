@@ -152,6 +152,7 @@ return require("packer").startup(
         }
 
         --Surround
+        -- BUG: fungerer ikke alltid, start fremmerst
         -- NOTE: visually select s<char> or press ys{motion}{char}
         -- NOTE: sr<from><to>, sd<char>
 
@@ -174,5 +175,8 @@ return require("packer").startup(
 
         --Terminal
         use "oberblastmeister/termwrapper.nvim"
+
+        --Discord
+        use "andweeb/presence.nvim"
     end
 )
