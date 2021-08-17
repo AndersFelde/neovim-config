@@ -73,7 +73,7 @@ keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 -- Telescope
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>", {noremap = true})
 keymap("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", {noremap = true})
-keymap("n", "<leader>fc", "<cmd>Telescope command_history<CR>", {noremap = true})
+keymap("n", "<leader>fC", "<cmd>Telescope command_history<CR>", {noremap = true})
 keymap("n", "<leader>fh", "<cmd>Telescope oldfiles<CR>", {noremap = true})
 keymap("n", "<leader>fb", "<cmd>Telescope marks<CR>", {noremap = true})
 
@@ -128,3 +128,6 @@ keymap("t", "<Esc>", "<C-\\><C-n>", {noremap = true})
 --Git
 keymap("", "<leader>gn", "<cmd>Neogit<CR>", {noremap = true})
 keymap("", "<leader>gl", "<cmd>LazyGit<CR>", {noremap = true})
+
+--Neoclip
+keymap("", "<leader>fc", "<cmd>Telescope neoclip<CR>", {noremap = true})

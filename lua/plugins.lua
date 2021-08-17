@@ -178,5 +178,14 @@ return require("packer").startup(
 
         --Discord
         use "andweeb/presence.nvim"
+
+        --Clipboard
+        -- BUG: Tar også med "x" i registry
+        use {
+            "AckslD/nvim-neoclip.lua",
+            config = function()
+                require("neoclip").setup()
+            end
+        }
     end
 )
