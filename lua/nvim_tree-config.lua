@@ -2,7 +2,7 @@
 -- BUG: Cursor er for langt bort, icons blir borte
 local tree_cb = require "nvim-tree.config".nvim_tree_callback
 -- default mappings
-vim.g.nvim_tree_bindings = {
+local list = {
     {key = {"<CR>", "o", "<2-LeftMouse>", "l"}, cb = tree_cb("edit")},
     {key = {"<2-RightMouse>", "<C-]>"}, cb = tree_cb("cd")},
     {key = {"<C-v>", "v"}, cb = tree_cb("vsplit")},
@@ -43,5 +43,14 @@ vim.g.nvim_tree_indent_markers = 1
 vim.g.nvim_tree_git_hl = 1
 vim.g.nvim_tree_highlight_opened_files = 1
 vim.g.nvim_tree_group_empty = 1
-vim.g.nvim_tree_lsp_diagnostics = 1
+require "nvim-tree".setup {
+    lsp_diagnostics = true,
+    view = {
+        mappings = {
+            custom_only = false,
+            list = list
+        }
+    }
+}
+
 -- vim.g.nvim_tree_show_icons = {folder_arrow = 0, git = 1, folders = 1, files = 1}
