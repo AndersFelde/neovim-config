@@ -44,7 +44,7 @@ vim.g.nvim_tree_git_hl = 1
 vim.g.nvim_tree_highlight_opened_files = 1
 vim.g.nvim_tree_group_empty = 1
 require "nvim-tree".setup {
-    lsp_diagnostics = true,
+    diagnostics = {enable = true},
     view = {
         mappings = {
             custom_only = false,
