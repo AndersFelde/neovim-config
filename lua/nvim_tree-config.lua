@@ -37,7 +37,7 @@ local list = {
 }
 -- local tree_cb = require "nvim-tree.config".nvim_tree_callback
 
-vim.cmd("let g:nvim_tree_ignore = ['.git']")
+-- vim.cmd("let g:nvim_tree_ignore = ['.git']")
 -- vim.g.nvim_tree_follow = 1
 vim.g.nvim_tree_indent_markers = 1
 vim.g.nvim_tree_git_hl = 1

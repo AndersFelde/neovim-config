@@ -2,7 +2,15 @@ require("formatter").setup(
     {
         logging = true,
         filetype = {
-            ["*"] = {
+            dockerfile = {
+                function()
+                    return {
+                        exe = "sed -i 's/[ \t]*$//'",
+                        stdin = true
+                    }
+                end
+            },
+            text = {
                 function()
                     return {
                         exe = "sed -i 's/[ \t]*$//'",
@@ -122,6 +130,6 @@ vim.api.nvim_command("augroup END") ]]
 vim.api.nvim_exec([[
 augroup FormatAutogroup
   autocmd!
-  autocmd BufWritePost * FormatWrite
+  autocmd BufWritePost  FormatWrite
 augroup END
 ]], true)
