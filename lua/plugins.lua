@@ -31,7 +31,8 @@ return require("packer").startup(
 
         --LSP
         use "neovim/nvim-lspconfig"
-        use "kabouzeid/nvim-lspinstall"
+        -- use "kabouzeid/nvim-lspinstall"
+        use 'williamboman/nvim-lsp-installer'
         use {
             "nvim-treesitter/nvim-treesitter",
             run = ":TSUpdate"

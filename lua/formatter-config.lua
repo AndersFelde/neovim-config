@@ -89,13 +89,12 @@ require("formatter").setup(
                 end
             },
             python = {
-                -- python
+                -- Configuration for psf/black
                 function()
                     return {
-                        exe = "black",
-                        args = {},
-                        stdin = false,
-                        tempfile_dir = "/tmp"
+                        exe = "black", -- this should be available on your $PATH
+                        args = {"-"},
+                        stdin = true
                     }
                 end
             },
@@ -130,6 +129,6 @@ vim.api.nvim_command("augroup END") ]]
 vim.api.nvim_exec([[
 augroup FormatAutogroup
   autocmd!
-  autocmd BufWritePost  FormatWrite
+  autocmd BufWritePost * FormatWrite
 augroup END
 ]], true)

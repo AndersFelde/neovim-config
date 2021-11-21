@@ -1,4 +1,3 @@
--- LspInstall
 local on_attach = function(client, bufnr)
     -- Mappings.
     local function buf_set_keymap(...)
@@ -25,21 +24,14 @@ local on_attach = function(client, bufnr)
     require "lsp_signature".on_attach()
 end
 
-local function setup_servers()
+-- LspInstall
+--[[ local function setup_servers()
     require "lspinstall".setup()
     local servers = require "lspinstall".installed_servers()
     for _, server in pairs(servers) do
         if server == "lua" then
             require "lspconfig"[server].setup {
                 on_attach = on_attach,
-                settings = {
-                    Lua = {
-                        diagnostics = {
-                            -- Get the language server to recognize the `vim` global
-                            globals = {"vim"}
-                        }
-                    }
-                }
             }
         else
             require "lspconfig"[server].setup {on_attach = on_attach}
@@ -53,8 +45,49 @@ setup_servers()
 require "lspinstall".post_install_hook = function()
     setup_servers()
     vim.cmd("bufdo e") -- this triggers the FileType autocmd that starts the server
-end
+end ]]
+local lsp_installer = require("nvim-lsp-installer")
 
+-- Register a handler that will be called for all installed servers.
+-- Alternatively, you may also register handlers on specific server instances instead (see example below).
+lsp_installer.on_server_ready(
+    function(server)
+        local opts = {}
+
+        -- (optional) Customize the options passed to the server
+        if server.name == "sumneko_lua" then
+            opts = {
+                settings = {
+                    Lua = {
+                        diagnostics = {
+                            -- Get the language server to recognize the `vim` global
+                            globals = {"vim"}
+                        }
+                    }
+                }
+            }
+        end
+
+        -- This setup() function is exactly the same as lspconfig's setup function.
+        -- Refer to https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+        server:setup(opts)
+    end
+)
+--LSPINSTALL
+--[[ local lsp_installer_servers = require'nvim-lsp-installer.servers'
+
+local server_available, requested_server = lsp_installer_servers.get_server("rust_analyzer")
+if server_available then
+    requested_server:on_ready(function ()
+        local opts = {}
+
+        requested_server:setup(opts)
+    end)
+    if not requested_server:is_installed() then
+        -- Queue the server to be installed
+        requested_server:install()
+    end
+end ]]
 -- compe
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
