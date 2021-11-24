@@ -5,16 +5,27 @@ require("formatter").setup(
             dockerfile = {
                 function()
                     return {
-                        exe = "sed -i 's/[ \t]*$//'",
-                        stdin = true
+                        exe = "sed",
+                        args = {"-i", "'s/[ \t]*$//'"},
+                        stdin = false
+                    }
+                end
+            },
+            make = {
+                function()
+                    return {
+                        exe = "sed",
+                        args = {"-i", "'s/[ \t]*$//'"},
+                        stdin = false
                     }
                 end
             },
             text = {
                 function()
                     return {
-                        exe = "sed -i 's/[ \t]*$//'",
-                        stdin = true
+                        exe = "sed",
+                        args = {"-i", "'s/[ \t]*$//'"},
+                        stdin = false
                     }
                 end
             },
