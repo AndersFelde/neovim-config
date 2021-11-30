@@ -59,7 +59,7 @@ keymap("n", "<leader>xr", "<cmd>Trouble lsp_references<cr>", {silent = true, nor
 -- WhichKey
 
 -- Compe
-keymap("i", "<C-CR>", "compe#complete()", {noremap = true, expr = true})
+--[[ keymap("i", "<C-CR>", "compe#complete()", {noremap = true, expr = true})
 keymap("i", "<CR>", "compe#confirm('<CR>')", {noremap = true, expr = true})
 keymap("i", "<C-e>", "compe#close('<C-e>')", {noremap = true, silent = true, expr = true})
 keymap("i", "<C-f>", "compe#scroll({ 'delta': +4 })", {noremap = true, silent = true, expr = true})
@@ -68,8 +68,7 @@ keymap("i", "<C-d>", "compe#scroll({ 'delta': -4 })", {noremap = true, silent = 
 keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
 keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
 keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
-keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
-
+keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true}) ]]
 -- Telescope
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>", {noremap = true})
 keymap("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", {noremap = true})

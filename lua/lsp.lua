@@ -50,16 +50,19 @@ local lsp_installer = require("nvim-lsp-installer")
 
 -- Register a handler that will be called for all installed servers.
 -- Alternatively, you may also register handlers on specific server instances instead (see example below).
+local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
 lsp_installer.on_server_ready(
     function(server)
         local opts = {
-            on_attach = on_attach
+            on_attach = on_attach,
+            capabilities = capabilities
         }
 
         -- (optional) Customize the options passed to the server
         if server.name == "sumneko_lua" then
             opts = {
                 on_attach = on_attach,
+                capabilities = capabilities,
                 settings = {
                     Lua = {
                         diagnostics = {
@@ -91,7 +94,7 @@ if server_available then
         requested_server:install()
     end
 end ]]
--- compe
+--[[ -- compe
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 capabilities.textDocument.completion.completionItem.resolveSupport = {
@@ -100,8 +103,7 @@ capabilities.textDocument.completion.completionItem.resolveSupport = {
         "detail",
         "additionalTextEdits"
     }
-}
-
+} ]]
 --lsp-utils
 vim.lsp.handlers["textDocument/codeAction"] = require "lsputil.codeAction".code_action_handler
 vim.lsp.handlers["textDocument/references"] = require "lsputil.locations".references_handler

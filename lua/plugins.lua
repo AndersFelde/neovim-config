@@ -29,10 +29,29 @@ return require("packer").startup(
         -- Bar
         use "romgrk/barbar.nvim"
 
+        use "onsails/lspkind-nvim"
+        use {"L3MON4D3/LuaSnip"}
+        --[[ use "hrsh7th/vim-vsnip"
+        use "hrsh7th/vim-vsnip-integ" ]]
+        use "rafamadriz/friendly-snippets"
+        use "hrsh7th/cmp-nvim-lsp"
+        use "hrsh7th/cmp-path"
+        use "hrsh7th/cmp-buffer"
+        use "lukas-reineke/cmp-rg"
+        use "f3fora/cmp-spell"
+        use "hrsh7th/cmp-cmdline"
+        use "lukas-reineke/cmp-under-comparator"
+
+        -- completion
+        use "hrsh7th/nvim-cmp"
+
+        use "hrsh7th/cmp-vsnip"
+        use "hrsh7th/vim-vsnip"
+
         --LSP
         use "neovim/nvim-lspconfig"
         -- use "kabouzeid/nvim-lspinstall"
-        use 'williamboman/nvim-lsp-installer'
+        use "williamboman/nvim-lsp-installer"
         use {
             "nvim-treesitter/nvim-treesitter",
             run = ":TSUpdate"
@@ -49,7 +68,6 @@ return require("packer").startup(
             "RishabhRD/nvim-lsputils",
             requires = "RishabhRD/popfix"
         }
-        use "onsails/lspkind-nvim"
         use "simrat39/symbols-outline.nvim"
         use "ray-x/lsp_signature.nvim"
         use "kosayoda/nvim-lightbulb"
@@ -79,9 +97,6 @@ return require("packer").startup(
         --Cursor highlight
         use "yamatsum/nvim-cursorline"
 
-        -- completion
-        use "hrsh7th/nvim-compe"
-
         --colorizer
         use {
             "norcalli/nvim-colorizer.lua",
@@ -94,9 +109,6 @@ return require("packer").startup(
         -- use "yamatsum/nvim-cursorline"
 
         -- snippets
-        use "hrsh7th/vim-vsnip"
-        use "hrsh7th/vim-vsnip-integ"
-        use "rafamadriz/friendly-snippets"
 
         -- git
         use {
