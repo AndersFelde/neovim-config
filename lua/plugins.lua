@@ -30,9 +30,8 @@ return require("packer").startup(
         use "romgrk/barbar.nvim"
 
         use "onsails/lspkind-nvim"
-        use {"L3MON4D3/LuaSnip"}
-        --[[ use "hrsh7th/vim-vsnip"
-        use "hrsh7th/vim-vsnip-integ" ]]
+
+        --SNIPPETS
         use "rafamadriz/friendly-snippets"
         use "hrsh7th/cmp-nvim-lsp"
         use "hrsh7th/cmp-path"
