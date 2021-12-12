@@ -189,7 +189,7 @@ ins_left {
 
 ins_left {
     "diagnostics",
-    sources = {"nvim_lsp"},
+    sources = {"nvim_diagnostics"},
     symbols = {error = " ", warn = " ", info = " "},
     color_error = colors.red,
     color_warn = colors.yellow,
@@ -263,7 +263,7 @@ ins_left_inactive {
 }
 
 ins_left_inactive {
-    "diagnostics",
+    "",
     sources = {"nvim_lsp"},
     symbols = {error = " ", warn = " ", info = " "},
     color_error = colors.red,
