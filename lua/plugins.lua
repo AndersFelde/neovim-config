@@ -29,7 +29,6 @@ return require("packer").startup(
         -- Bar
         use "romgrk/barbar.nvim"
 
-        use "onsails/lspkind-nvim"
 
         --SNIPPETS
         use "rafamadriz/friendly-snippets"
@@ -42,6 +41,7 @@ return require("packer").startup(
         use "lukas-reineke/cmp-under-comparator"
 
         -- completion
+        use "onsails/lspkind-nvim"
         use "hrsh7th/nvim-cmp"
 
         use "hrsh7th/cmp-vsnip"
