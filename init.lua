@@ -10,7 +10,6 @@ require("formatter-config")
 require("autopairs-config")
 require("gitsigns-config")
 require("whichkey-config")
-require("lspkind-conifg")
 require("lightbulb-config")
 require("trouble-config")
 -- BUG: Funker ikke
