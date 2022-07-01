@@ -39,10 +39,6 @@ local list = {
 
 -- vim.cmd("let g:nvim_tree_ignore = ['.git']")
 -- vim.g.nvim_tree_follow = 1
-vim.g.nvim_tree_indent_markers = 1
-vim.g.nvim_tree_git_hl = 1
-vim.g.nvim_tree_highlight_opened_files = 1
-vim.g.nvim_tree_group_empty = 1
 require "nvim-tree".setup {
     diagnostics = {enable = true},
     view = {
@@ -50,6 +46,11 @@ require "nvim-tree".setup {
             custom_only = false,
             list = list
         }
+    },
+    renderer = {
+        group_empty = true,
+        highlight_opened_files = "icon",
+        indent_markers = {enable = true}
     }
 }
 

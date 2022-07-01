@@ -29,7 +29,6 @@ return require("packer").startup(
         -- Bar
         use "romgrk/barbar.nvim"
 
-
         --SNIPPETS
         use "rafamadriz/friendly-snippets"
         use "hrsh7th/cmp-nvim-lsp"
@@ -168,13 +167,13 @@ return require("packer").startup(
         -- NOTE: visually select s<char> or press ys{motion}{char}
         -- NOTE: sr<from><to>, sd<char>
 
-        use {
+        -- BUG Klarer ikke installere
+        --[[ use {
             "blackCauldron7/surround.nvim",
             config = function()
                 require "surround".setup {}
             end
-        }
-
+        } ]]
         --Reload
         -- NOTE: :Reload
         use "famiu/nvim-reload"
