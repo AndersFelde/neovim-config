@@ -51,6 +51,10 @@ require "nvim-tree".setup {
         group_empty = true,
         highlight_opened_files = "icon",
         indent_markers = {enable = true}
+    },
+    git = {
+        enable = true,
+        ignore = false
     }
 }
 
