@@ -1,5 +1,11 @@
-vim.g.tokyonight_style = "night"
-vim.g.tokyonight_italic_comments = false
-vim.g.tokyonight_italic_functions = false
+require("tokyonight").setup(
+    {
+        style = "night",
+        styles = {
+            comments = "NONE",
+            keywords = "NONE"
+        }
+    }
+)
 vim.cmd("colorscheme tokyonight")
 -- require("material").set()
