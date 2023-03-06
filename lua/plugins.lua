@@ -47,9 +47,12 @@ return require("packer").startup(
         use "hrsh7th/vim-vsnip"
 
         --LSP
-        use "neovim/nvim-lspconfig"
-        -- use "kabouzeid/nvim-lspinstall"
-        use "williamboman/nvim-lsp-installer"
+        use {
+            "williamboman/mason.nvim",
+            "williamboman/mason-lspconfig.nvim",
+            "neovim/nvim-lspconfig",
+        }
+
         use {
             "nvim-treesitter/nvim-treesitter",
             run = ":TSUpdate"
