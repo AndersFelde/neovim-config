@@ -1,3 +1,5 @@
+# DETTE ER GAMMELT, FUNKER IKKE LENGER
+> Sjekk heller https://github.com/andersfelde/lvim
 ## Setup
 
 ### Install packer
